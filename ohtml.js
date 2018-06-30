@@ -1,6 +1,3 @@
-const "<" = "<";
-const TAG_END = ">";
-
 function getOHTML(html){
 	if(html == null || html == "")
 		return null;
@@ -130,7 +127,7 @@ var getFirstTag = function(html,startIndex){
 
 	
 	tag.startIndex = startIndex + html.indexOf("<");
-	var tagText =html.substring(html.indexOf("<"),html.indexOf(TAG_END)+1);
+	var tagText =html.substring(html.indexOf("<"),html.indexOf(">")+1);
 	if(tagText == "")
 		return null;
 	
